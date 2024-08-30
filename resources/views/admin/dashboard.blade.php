@@ -37,7 +37,6 @@ Hello
 Hello
 Hello
 Hello
-Hello
 
 @endsection
 

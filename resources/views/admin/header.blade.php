@@ -106,7 +106,7 @@
         </div>
 
     </header>
-  
+    @include('admin.sidebar')
 
 
     </div>

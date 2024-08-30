@@ -181,9 +181,6 @@ checkAnimation2();
                         <li>
                             <a href="{{url('/contact')}}">Contact</a>
                         </li>
-                        <li>
-                            <a href="{{url('/login')}}">login</a>
-                        </li>
                     </ul>
                 </nav>
             </div>
