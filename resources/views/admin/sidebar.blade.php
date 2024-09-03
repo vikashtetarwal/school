@@ -1,243 +1,105 @@
-<div class="main-container">
-  <div class="navcontainer">
-    <nav class="nav">
-      <div class="nav-upper-options">
-        <div class="nav-option option1">
-          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
-            class="nav-img"
-            alt="dashboard">
-          <h5> Dashboard</h5>
-        </div>
 
-        <div class="option2 nav-option">
-          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png"
-            class="nav-img"
-            alt="articles">
-          <h5> Articles</h5>
-        </div>
-
-        <div class="nav-option option3">
-          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
-            class="nav-img"
-            alt="report">
-          <h5> Report</h5>
-        </div>
-
-        <div class="nav-option option4">
-          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png"
-            class="nav-img"
-            alt="institution">
-          <h5> Institution</h5>
-        </div>
-
-        <div class="nav-option option5">
-          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
-            class="nav-img"
-            alt="blog">
-          <h5> Profile</h5>
-        </div>
-
-        <div class="nav-option option6">
-          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
-            class="nav-img"
-            alt="settings">
-          <h5> Settings</h5>
-        </div>
-
-        <div class="nav-option logout">
-          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png"
-            class="nav-img"
-            alt="logout">
-          <h5>Logout</h5>
-        </div>
-
-      </div>
-    </nav>
-  </div>
-  <div class="main">
-    <div class="row p-4 shadow rounded">
-           <h1 class="text-danger text-center mb-4">Admin User Profile</h1>
-
-      <div class="col-md-4 p-5 border rounded shadow">
-        <form action="">
-
-          <img class="rounded-circle mx-auto d-block mb-4" src="{{asset('backend/images/testimonials-1.jpg')}}" width="150px">
-          <input type="file" name="image" class="form-control">
-          <input type="submit" class="btn btn-danger mt-4 mx-auto d-block" value="Update">
-        </form>
-
-      </div>
-
-    
-      <div class="col-md-6 ms-2 p-5 border rounded shadow">
-        <form action="">
-
-          <label for="" class="mt-2">Name</label>
-          <input type="text" class="form-control" placeholder="Enter Your Name">
-          <label for="" class="mt-2">Email</label>
-          <input type="email" class="form-control" placeholder="Enter Your Email">
-          <label for="" class="mt-2">Password</label>
-          <input type="password" class="form-control" placeholder="Enter Your Password">
-          <input type="submit" class="btn btn-danger mt-4 mx-auto d-block" value="Update">
-        </form>
-
-      </div>
-    </div>
-
-    <div class="row p-4 shadow rounded">
-    <h1 class="text-danger text-center">Admin User Password Change</h1>
-      <div class="col-md-6 mx-auto d-block p-5 border rounded shadow">
-
-      <label for="">New Password</label>
-      <input type="password" class="form-control" placeholder="Enter Your New Password">
-
-      <label for="" class="mt-2">Confirm Password</label>
-      <input type="password" class="form-control" placeholder="Enter Your Confirm Password">
-
-      <input type="submit" class="btn btn-danger mx-auto d-block mt-4" value="Update">
-
-      </div>
-    </div>
-
-    <!-- <div class="searchbar2">
-          <input type="text"
-            name=""
-            id=""
-            placeholder="Search">
-          <div class="searchbtn">
-            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
-              class="icn srchicn"
-              alt="search-button">
-          </div>
-        </div> -->
-
-    <!-- <div class="box-container">
-
-          <div class="box box1">
-            <div class="text">
-              <h2 class="topic-heading">60.5k</h2>
-              <h2 class="topic">Article Views</h2>
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('dashboard')}}">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">UI Elements</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+              </ul>
             </div>
-
-            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(31).png"
-              alt="Views">
-          </div>
-
-          <div class="box box2">
-            <div class="text">
-              <h2 class="topic-heading">150</h2>
-              <h2 class="topic">Likes</h2>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Form elements</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a></li>
+              </ul>
             </div>
-
-            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210185030/14.png"
-              alt="likes">
-          </div>
-
-          <div class="box box3">
-            <div class="text">
-              <h2 class="topic-heading">250+</h2>
-              <h2 class="topic">Comments</h2>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Charts</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a></li>
+              </ul>
             </div>
-
-            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(32).png"
-              alt="comments">
-          </div>
-
-          <div class="box box4">
-            <div class="text">
-              <h2 class="topic-heading">70</h2>
-              <h2 class="topic">Published</h2>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-title">Tables</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Basic table</a></li>
+              </ul>
             </div>
-
-            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210185029/13.png" alt="published">
-          </div>
-        </div> -->
-
-    @yield('content')
-
-    <!-- <div class="report-container">
-          <div class="report-header">
-            <h1 class="recent-Articles">Recent Articles</h1>
-            <button class="view">View All</button>
-          </div>
-
-          <div class="report-body">
-            <div class="report-topic-heading">
-              <h3 class="t-op">Article</h3>
-              <h3 class="t-op">Views</h3>
-              <h3 class="t-op">Comments</h3>
-              <h3 class="t-op">Status</h3>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+              <i class="icon-contract menu-icon"></i>
+              <span class="menu-title">Icons</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="icons">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/icons/mdi.html">Mdi icons</a></li>
+              </ul>
             </div>
-
-            <div class="items">
-              <div class="item1">
-                <h3 class="t-op-nextlvl">Article 73</h3>
-                <h3 class="t-op-nextlvl">2.9k</h3>
-                <h3 class="t-op-nextlvl">210</h3>
-                <h3 class="t-op-nextlvl label-tag">Published</h3>
-              </div>
-
-              <div class="item1">
-                <h3 class="t-op-nextlvl">Article 72</h3>
-                <h3 class="t-op-nextlvl">1.5k</h3>
-                <h3 class="t-op-nextlvl">360</h3>
-                <h3 class="t-op-nextlvl label-tag">Published</h3>
-              </div>
-
-              <div class="item1">
-                <h3 class="t-op-nextlvl">Article 71</h3>
-                <h3 class="t-op-nextlvl">1.1k</h3>
-                <h3 class="t-op-nextlvl">150</h3>
-                <h3 class="t-op-nextlvl label-tag">Published</h3>
-              </div>
-
-              <div class="item1">
-                <h3 class="t-op-nextlvl">Article 70</h3>
-                <h3 class="t-op-nextlvl">1.2k</h3>
-                <h3 class="t-op-nextlvl">420</h3>
-                <h3 class="t-op-nextlvl label-tag">Published</h3>
-              </div>
-
-              <div class="item1">
-                <h3 class="t-op-nextlvl">Article 69</h3>
-                <h3 class="t-op-nextlvl">2.6k</h3>
-                <h3 class="t-op-nextlvl">190</h3>
-                <h3 class="t-op-nextlvl label-tag">Published</h3>
-              </div>
-
-              <div class="item1">
-                <h3 class="t-op-nextlvl">Article 68</h3>
-                <h3 class="t-op-nextlvl">1.9k</h3>
-                <h3 class="t-op-nextlvl">390</h3>
-                <h3 class="t-op-nextlvl label-tag">Published</h3>
-              </div>
-
-              <div class="item1">
-                <h3 class="t-op-nextlvl">Article 67</h3>
-                <h3 class="t-op-nextlvl">1.2k</h3>
-                <h3 class="t-op-nextlvl">580</h3>
-                <h3 class="t-op-nextlvl label-tag">Published</h3>
-              </div>
-
-              <div class="item1">
-                <h3 class="t-op-nextlvl">Article 66</h3>
-                <h3 class="t-op-nextlvl">3.6k</h3>
-                <h3 class="t-op-nextlvl">160</h3>
-                <h3 class="t-op-nextlvl label-tag">Published</h3>
-              </div>
-
-              <div class="item1">
-                <h3 class="t-op-nextlvl">Article 65</h3>
-                <h3 class="t-op-nextlvl">1.3k</h3>
-                <h3 class="t-op-nextlvl">220</h3>
-                <h3 class="t-op-nextlvl label-tag">Published</h3>
-              </div>
-
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">User Pages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+              </ul>
             </div>
-          </div>
-        </div> -->
-
-
-  </div>
-  <script src="./index.js"></script>
-</div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+              <i class="icon-ban menu-icon"></i>
+              <span class="menu-title">Error pages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="error">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../../docs/documentation.html">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Documentation</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
