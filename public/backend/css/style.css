@@ -10710,23 +10710,19 @@ textarea.form-control-lg {
   padding-left: 1.5em;
   margin-bottom: 0.125rem;
 }
-.form-check .form-check-input {
+/* .form-check .form-check-input {
   float: left;
   margin-left: -1.5em;
-}
+} */
 
 .form-check-reverse {
   padding-right: 1.5em;
   padding-left: 0;
   text-align: right;
 }
-.form-check-reverse .form-check-input {
-  float: right;
-  margin-right: -1.5em;
-  margin-left: 0;
-}
 
-.form-check-input {
+
+/* .form-check-input {
   --bs-form-check-bg: var(--bs-body-bg);
   flex-shrink: 0;
   width: 1em;
@@ -10741,8 +10737,8 @@ textarea.form-control-lg {
   background-size: contain;
   border: var(--bs-border-width) solid var(--bs-border-color);
   print-color-adjust: exact;
-}
-.form-check-input[type=checkbox] {
+} */
+/* .form-check-input[type=checkbox] {
   border-radius: 0.25em;
 }
 .form-check-input[type=radio] {
@@ -10792,7 +10788,7 @@ textarea.form-control-lg {
   background-position: left center;
   border-radius: 2em;
   transition: background-position 0.15s ease-in-out;
-}
+} */
 @media (prefers-reduced-motion: reduce) {
   .form-switch .form-check-input {
     transition: none;

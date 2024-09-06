@@ -47,9 +47,9 @@ class Authcontroller extends Controller
     //     }
     // }
 
-    public function dashboard(){
-        return view('admin/dashboard');
-    }
+
+
+    
 
     public function logout(Request $request)
     {

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\front\HomeController;
 use App\Http\Controllers\admin\Authcontroller;
+use App\Http\Controllers\admin\dashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,11 +36,14 @@ Route::get('/',[HomeController::class, 'index']);
 
 Route::post('admin-login/store', [Authcontroller::class, 'admin_login'])->name('admin_login.store');
 Route::get('admin/login', [Authcontroller::class, 'login'])->name('login');
-
+Route::get('admin/change_profile', [dashboardController::class,'admin_changeprofile'])->name('admin-profile-change');
+Route::post('admin/profile_update', [dashboardController::class,'admin_profile_update'])->name('admin-profile-update');
+Route::get('admin/change_password', [dashboardController::class,'admin_changepassword'])->name('admin-user-changepassword');
 Route::group(['middleware' => ['auth', 'admin.check']], function () {
-    Route::get('/dashboard', [Authcontroller::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/dashboard', [dashboardController::class, 'dashboard'])->name('admin.dashboard');
               Route::get('/logout', [Authcontroller::class, 'logout'])->name('user-logout');
-});
+            
+            });
 
 
 
