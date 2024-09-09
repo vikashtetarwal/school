@@ -5,11 +5,12 @@
            <h1 class="text-danger text-center mb-4">Admin User Profile</h1>
 
       <div class="col-md-4 p-5 border rounded shadow">
-        <form action="">
+        <form action="{{route('change_admin_photo')}}" method="post" enctype="multipart/form-data">
+          @csrf
 
           <img class="rounded-circle mx-auto d-block mb-4" src="{{asset('backend/images/testimonials-1.jpg')}}" width="150px">
-          <input type="file" name="image" class="form-control">
-          <input type="submit" class="btn btn-danger mt-4 mx-auto rounded d-block text-light" value="Update">
+          <input type="file" name="profile_photo" class="form-control">
+          <input type="submit" class="btn btn-danger mt-4 mx-auto rounded d-block text-light" value="Update Profile">
         </form>
 
       </div>
@@ -23,8 +24,8 @@
           <input type="text" value="{{$admin->name}}" name="name" class="form-control" placeholder="Enter Your Name">
           <label for="" class="mt-2">Email</label>
           <input type="email" value="{{$admin->email}}" name="email" class="form-control" placeholder="Enter Your Email">
-          <label for="" class="mt-2">Password</label>
-          <input type="text" value="{{$admin->password}}" name="password" class="form-control" placeholder="Enter Your Password">
+          <!-- <label for="" class="mt-2">Password</label> -->
+          <!-- <input type="text" value="{{$admin->password}}" name="password" class="form-control" placeholder="Enter Your Password"> -->
           <input type="submit" class="btn btn-danger rounded text-light mt-4 mx-auto d-block" value="Update">
         </form>
 
